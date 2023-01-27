@@ -34,8 +34,39 @@ namespace Lab1
             persons.Add(person2);
             persons.Add(person3);
             persons.Add(person4);
+
+            double averageAge = persons.Average(a => a.Age);
+            Console.WriteLine("Average age is: " + averageAge);
             
-            
+            foreach (Person person in persons) 
+            {
+                int maxAge = persons.Max(a => a.Age);
+                int minAge = persons.Min(a=>a.Age);
+                int age = person.Age;
+                string firstName = person.FirstName;
+                
+                if (age == minAge)
+                {
+                    Console.WriteLine("The youngest person is: " + firstName);
+                }
+                if (age==maxAge)
+                {
+                    Console.WriteLine("The oldest person is: "+firstName);
+                }
+                if (firstName.StartsWith("M"))
+                {
+                    Console.WriteLine(person);
+                }          
+            }
+
+            foreach (Person person in persons)
+            {
+                string favoriteColor = person.FavoriteColor;
+                if (favoriteColor == "Blue")
+                {
+                    Console.WriteLine(person);
+                }
+            }
         }
     }
 }

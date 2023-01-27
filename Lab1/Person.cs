@@ -16,6 +16,13 @@ namespace Lab1
         private string favoriteColor;
         private bool isWorking;
 
+        public int PersonId { get=>age; set => age = value; }
+        public string FirstName { get=> firstName; set => firstName = value; }
+        public string LastName { get=> lastName; set => lastName = value; }
+        public int Age { get=> age; set => age = value; }
+        public string FavoriteColor { get => favoriteColor;set=> favoriteColor = value; }
+        public bool IsWorking { get => isWorking; }
+
         public Person(int personId, string firstName, string lastName, int age, string favoriteColor, bool isWorking)
         {
             this.personId = personId;
@@ -45,11 +52,11 @@ namespace Lab1
 
         public void GetAgeInTenYears()
         {
-            string firstName = this.firstName;
+            //string firstName = this.firstName;
             string lastName = this.lastName;
             string name = firstName +" " +lastName;
-            int age = this.age + 10;
-            Console.WriteLine(name + "'s Age in 10 years is: " + age);
+            int age10 = this.age + 10;
+            Console.WriteLine(name + "'s Age in 10 years is: " + age10);
         }
 
         public override string ToString()
